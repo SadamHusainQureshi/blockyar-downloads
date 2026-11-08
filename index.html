@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="صفحه دانلود بلوک‌یار؛ دریافت نسخه اندروید ۱.۱">
+  <title>بلوک‌یار | دانلود نسخه اندروید</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --panel: #121d30;
+      --panel2: #17243a;
+      --text: #f5f7fb;
+      --muted: #aebbd0;
+      --gold: #e6bd68;
+      --gold2: #f3d995;
+      --line: rgba(255,255,255,.11);
+      --green: #73d6a1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 50% -10%, rgba(230,189,104,.16), transparent 42%),
+        linear-gradient(180deg, #101a2b 0%, var(--bg) 72%);
+      color: var(--text);
+      font-family: Tahoma, "Vazirmatn", "Segoe UI", sans-serif;
+      line-height: 1.9;
+    }
+    a { color: inherit; }
+    .wrap { width: min(940px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 26px 0 12px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .mark {
+      width: 48px; height: 48px; display: grid; place-items: center;
+      border: 1px solid rgba(230,189,104,.55); border-radius: 15px;
+      color: var(--gold2); font-size: 25px; font-weight: 900;
+      background: linear-gradient(145deg, rgba(230,189,104,.18), rgba(230,189,104,.04));
+      box-shadow: 0 8px 30px rgba(0,0,0,.2);
+    }
+    .brand-name { font-size: 21px; font-weight: 800; letter-spacing: -.5px; }
+    .brand-sub { color: var(--muted); font-size: 12px; margin-top: -5px; }
+    main { padding: 48px 0 34px; }
+    .hero { text-align: center; max-width: 720px; margin: 0 auto 34px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(115,214,161,.25); color: var(--green);
+      background: rgba(115,214,161,.08); border-radius: 999px;
+      padding: 4px 13px; font-size: 12px; font-weight: 700;
+    }
+    h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.35; margin: 18px 0 10px; }
+    h1 span { color: var(--gold2); }
+    .lead { color: var(--muted); font-size: 16px; margin: 0 auto; max-width: 600px; }
+    .download-card {
+      max-width: 650px; margin: 30px auto 0; padding: 25px;
+      border: 1px solid rgba(230,189,104,.28); border-radius: 24px;
+      background: linear-gradient(145deg, rgba(23,36,58,.98), rgba(18,29,48,.98));
+      box-shadow: 0 24px 70px rgba(0,0,0,.25);
+    }
+    .app-row { display: flex; align-items: center; gap: 16px; text-align: right; }
+    .app-icon {
+      flex: 0 0 68px; width: 68px; height: 68px; display: grid; place-items: center;
+      border-radius: 20px; background: linear-gradient(145deg, #f0d38d, #bd8b37);
+      color: #172033; font-weight: 900; font-size: 31px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.45);
+    }
+    .app-title { font-size: 20px; font-weight: 800; margin: 0; }
+    .app-meta { color: var(--muted); font-size: 13px; margin-top: 3px; }
+    .facts { display: flex; flex-wrap: wrap; gap: 9px; margin: 20px 0; }
+    .fact { color: #d7e0ef; background: rgba(255,255,255,.055); border: 1px solid var(--line); border-radius: 10px; padding: 5px 11px; font-size: 12px; }
+    .download {
+      display: flex; justify-content: center; align-items: center; gap: 10px;
+      width: 100%; min-height: 56px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--gold2), var(--gold));
+      color: #172033; text-decoration: none; font-weight: 900; font-size: 16px;
+      box-shadow: 0 10px 26px rgba(230,189,104,.18);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .download:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .safe-note { color: var(--muted); font-size: 11px; text-align: center; margin: 12px 0 0; }
+    .sections { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+    .info {
+      padding: 19px; background: rgba(18,29,48,.72);
+      border: 1px solid var(--line); border-radius: 18px;
+    }
+    .info h2 { font-size: 16px; margin: 0 0 8px; }
+    .info p, .info li { color: var(--muted); font-size: 13px; margin: 0; }
+    .info ul { padding-right: 19px; margin: 7px 0 0; }
+    .warning {
+      margin-top: 17px; border-right: 3px solid var(--gold);
+      padding: 10px 14px; background: rgba(230,189,104,.07);
+      color: #d9e0ec; border-radius: 10px; font-size: 12px;
+    }
+    footer { padding: 22px 0 30px; color: #8290a7; text-align: center; font-size: 11px; border-top: 1px solid var(--line); }
+    @media (max-width: 620px) {
+      main { padding-top: 30px; }
+      .download-card { padding: 19px; border-radius: 19px; }
+      .sections { grid-template-columns: 1fr; }
+      .lead { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand" aria-label="بلوک‌یار">
+      <div class="mark" aria-hidden="true">ب</div>
+      <div>
+        <div class="brand-name">بلوک‌یار</div>
+        <div class="brand-sub">صفحه دریافت نسخه اندروید</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow"><span aria-hidden="true">●</span> نسخه اندروید آماده دریافت است</div>
+      <h1>مدیریت ساده‌تر با <span>بلوک‌یار</span></h1>
+      <p class="lead">نسخه اندروید بلوک‌یار را دریافت کنید و برنامه را روی گوشی خود نصب کنید.</p>
+
+      <div class="download-card">
+        <div class="app-row">
+          <div class="app-icon" aria-hidden="true">ب</div>
+          <div>
+            <p class="app-title">بلوک‌یار برای اندروید</p>
+            <div class="app-meta">نسخه ۱.۱ · فایل نصب APK</div>
+          </div>
+        </div>
+        <div class="facts">
+          <span class="fact">نسخه: 1.1</span>
+          <span class="fact">حجم فایل: حدود ۳.۱۴ مگابایت</span>
+          <span class="fact">ویژه اندروید</span>
+        </div>
+        <a class="download" href="https://github.com/SadamHusainQureshi/blockyar-downloads/releases/download/v1.1/blockyar-release.apk">
+          <span aria-hidden="true">↓</span> دانلود بلوک‌یار
+        </a>
+        <p class="safe-note">دانلود از صفحه انتشار عمومی GitHub انجام می‌شود.</p>
+      </div>
+    </section>
+
+    <section class="sections" aria-label="راهنمای دانلود و نصب">
+      <article class="info">
+        <h2>روش نصب</h2>
+        <ul>
+          <li>روی دکمه دانلود بزنید.</li>
+          <li>پس از پایان دانلود، فایل APK را باز کنید.</li>
+          <li>اگر گوشی اجازه خواست، نصب از این منبع را برای مرورگر یا فایل‌منیجر مجاز کنید.</li>
+          <li>گزینه نصب را انتخاب کنید.</li>
+        </ul>
+      </article>
+      <article class="info">
+        <h2>پیش از نصب</h2>
+        <p>برای نصب، فضای کافی در گوشی داشته باشید و فایل را فقط از لینک دانلود رسمی ارائه‌شده در این صفحه دریافت کنید.</p>
+      </article>
+    </section>
+
+    <div class="warning">
+      توجه: اگر نسخه قبلی برنامه با امضای متفاوتی نصب شده باشد، ممکن است نصب نسخه جدید روی آن انجام نشود. در این حالت قبل از حذف برنامه، از اطلاعات مهم خود نسخه پشتیبان تهیه کنید.
+    </div>
+  </main>
+
+  <footer class="wrap">
+    بلوک‌یار · صفحه دریافت نسخه اندروید · نسخه انتشار ۱.۱
+  </footer>
+</body>
+</html>
